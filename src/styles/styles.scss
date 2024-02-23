@@ -1,0 +1,108 @@
+@use 'vars';
+@use 'buttons';
+
+body {
+    background-color: #fafafa;
+    font-family: 'Geist', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+        margin: 0;
+        color: initial;
+    }
+}
+
+.lobby {
+    height: 95vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+    header {
+        .container-fluid {
+            background-color: #171717;
+            .upper-bar{
+                display: flex;
+                gap: 6px;
+                padding: 6px 0;
+            }
+        }
+        nav{
+            height: 48px;
+            ul{
+                list-style: none;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.hero-section{
+    h2{
+        color: rgb(23, 23, 23);
+    }
+    p{
+        color: rgb(102, 102, 102);
+    }
+}
+
+.internal-links-section{
+    .internal-links-card{
+        background-color: #111;
+        color: white;
+        aspect-ratio: 1 / 1;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.services-section {
+    margin-bottom: 48px;
+    .services-section-card{
+        padding: 48px 0 0 0;
+        h4{
+            color: rgb(23, 23, 23);
+        }
+        p{
+            color: rgb(102, 102, 102);
+        }
+        figure{
+            border-radius: 6px;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            margin: 0;
+            img{
+                max-height: 100%;
+                filter: saturate(0);
+            }
+        }
+    }
+}
+
+
+footer {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto;
+
+    .contact{
+        background-color: #171717;
+        color: white;
+        h3{
+            margin: 0;
+        }
+        display: flex;
+        align-items: center;
+
+        padding: 36px 0;
+    }
+    .copyright{
+        background-color: #444;
+        color: white;
+
+        padding: 6px 0;
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "domo-landing-wireframe",
+  "version": "1.0.0",
+  "description": "Technical test to apply for the position of frontend dev",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compilescss": "npx sass src/styles/styles.scss src/styles/styles.css --watch"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "bootstrap",
+    "sass",
+    "wireframe",
+    "ligth",
+    "ui",
+    "pretty",
+    "ui"
+  ],
+  "author": "Henry Navas",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "sass": "^1.71.0"
+  }
+}

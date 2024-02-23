@@ -1,0 +1,36 @@
+$fonts: (
+  'Geist Regular': 'Geist-Regular.woff2',
+  'Geist Bold': 'Geist-Bold.woff2',
+);
+
+@each $font-name, $font-file in $fonts {
+  @font-face {
+    font-family: #{$font-name};
+    src: url('../assets/fonts/#{$font-file}') format('woff2');
+    font-weight: if(index($font-file, 'bold'), bold, normal);
+    font-style: normal;
+  }
+}
+
+
+.big-title{
+  line-height: 56px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.big-subtitle{
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.normal-title{
+  line-height: 40px;
+  font-size: 32px;
+  font-weight: 500;
+}
+.normal-text{
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(161, 161, 161)
+}
