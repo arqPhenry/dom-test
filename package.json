@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compilescss": "npx sass src/styles/styles.scss src/styles/styles.css --watch"
+    "compilescss": "npx sass src/styles/styles.scss styles.css"
   },
   "keywords": [
     "html",
