@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compilescss": "npx sass src/styles/styles.scss public/styles.css --watch"
+    "compilescss": "npx sass src/styles/styles.scss src/styles/styles.css --watch"
   },
   "keywords": [
     "html",
@@ -22,7 +22,6 @@
   "author": "Henry Navas",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.3.2",
     "sass": "^1.71.0"
   }
 }
