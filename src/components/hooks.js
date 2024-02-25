@@ -34,7 +34,7 @@ function createServices (data) {
         cardElement.innerHTML = `
         <div class="row align-items-center m-0">
           <div class="col-md-8 col-xsm-12 mb-2">
-              <h4 class="normal-title">${card.title}</h4>
+              <h4 class="medium-title">${card.title}</h4>
               <p class="normal-text">${card.content}</p>
               <button class="white-button">${card.button}</button>
           </div>

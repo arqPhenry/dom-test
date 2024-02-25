@@ -11,14 +11,20 @@
   font-style: normal;
 }
 .big-title {
-  line-height: 56px;
-  font-size: 40px;
+  line-height: 85px;
+  font-size: 82px;
   font-weight: 600;
 }
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .big-title {
-    line-height: 40px;
-    font-size: 32px;
+    line-height: 72px;
+    font-size: 69px;
+  }
+}
+@media (max-width: 425px) {
+  .big-title {
+    line-height: 53px;
+    font-size: 51px;
   }
 }
 
@@ -27,11 +33,17 @@
   font-size: 20px;
   font-weight: 400;
 }
-@media (max-width: 500px) {
+@media (max-width: 425px) {
   .big-subtitle {
-    line-height: 24px;
-    font-size: 16px;
+    line-height: 28px;
+    font-size: 18px;
   }
+}
+
+.medium-title {
+  line-height: 40px;
+  font-size: 37px;
+  font-weight: 600;
 }
 
 .normal-title {
@@ -43,6 +55,12 @@
 .normal-text {
   line-height: 24px;
   font-size: 16px;
+  font-weight: 400;
+}
+
+.tiny-text {
+  line-height: 20px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -142,23 +160,30 @@ body a {
 .lobby header .container-fluid .upper-bar {
   display: flex;
   gap: 6px;
-  padding: 6px 0;
+  padding: 6px 12px;
 }
-.lobby header nav {
-  height: 48px;
+.lobby header nav .icon-button {
+  color: #111;
+  background-color: white;
+  border: 1px solid hsla(0, 0%, 0%, 0.08);
+}
+.lobby header nav .icon-button:hover {
+  background-color: #fafafa;
+}
+.lobby header nav .icon-button:focus {
+  box-shadow: none;
 }
 .lobby header nav ul {
   list-style: none;
-  margin-bottom: 0;
 }
-.lobby header nav div {
+.lobby header nav ul li a {
+  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
-@media (max-width: 767px) {
-  .lobby header nav div {
-    justify-content: center;
-  }
+.lobby header nav ul li a button {
+  width: 100%;
+  justify-content: center;
 }
 
 .hero-section h2 {
@@ -168,7 +193,12 @@ body a {
   color: rgb(102, 102, 102);
 }
 .hero-section .container {
-  padding: 48px 12px;
+  padding: 64px 12px;
+}
+@media (max-width: 425px) {
+  .hero-section .container {
+    padding-bottom: 96px;
+  }
 }
 
 .internal-links-section .internal-links-card {
@@ -195,6 +225,7 @@ body a {
 }
 .services-section .services-section-card p {
   color: rgb(102, 102, 102);
+  max-width: 500px;
 }
 .services-section .services-section-card figure {
   border-radius: 6px;
@@ -211,22 +242,27 @@ footer {
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: auto;
+  background-color: #111;
 }
 footer .contact {
   background-color: #171717;
   color: white;
   padding: 24px 0;
+  border-radius: 0 0 12px 12px;
+}
+footer .contact .container .row button {
+  color: rgb(161, 161, 161);
+}
+footer .contact .container .row button:hover {
+  color: white;
 }
 @media (max-width: 767px) {
   footer .contact .container .row .links {
     margin-bottom: 24px;
   }
-  footer .contact .container .row .links h3 {
-    display: none;
-  }
 }
 footer .contact .container .row .links h3 {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 footer .contact .container .row .links .footwrapper figure {
   max-width: 300px;
@@ -242,6 +278,9 @@ footer .contact .container .row .links .footwrapper figure img {
   footer .contact .container .row .links .footwrapper figure {
     margin: 0 0 6px 0;
   }
+}
+footer .contact .container .row .links .footwrapper div {
+  gap: 6px;
 }
 @media (max-width: 767px) {
   footer .contact .container .row .links .footwrapper {
@@ -262,9 +301,26 @@ footer .contact .container .row .social-media {
   }
 }
 footer .copyright {
-  background-color: #444;
-  color: white;
+  color: rgb(161, 161, 161);
   padding: 6px 0;
+}
+footer .copyright .container {
+  justify-content: space-between;
+}
+footer .copyright .container button {
+  color: rgb(161, 161, 161);
+}
+footer .copyright .container button:hover {
+  color: white;
+}
+footer .copyright .container span {
+  color: white;
+}
+@media (max-width: 767px) {
+  footer .copyright .container {
+    justify-content: center;
+    gap: 12px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -28,21 +28,34 @@ body {
             .upper-bar{
                 display: flex;
                 gap: 6px;
-                padding: 6px 0;
+                padding: 6px 12px;
             }
         }
         nav{
-            height: 48px;
+            .icon-button {
+                color: #111;
+                background-color: white;
+                border: 1px solid hsla(0, 0, 0, 0.08);
+                &:hover{
+                    background-color: #fafafa;
+                }
+                &:focus{
+                    box-shadow: none;
+                }
+            }
             ul{
                 list-style: none;
-                margin-bottom: 0;
-            }
-
-            div {
-                align-items: center;
-                justify-content: space-between;
-                @media (max-width: 767px){
-                    justify-content: center;
+                li{
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        button{
+                            width: 100%;
+                            justify-content: center;
+                        }
+                        
+                    }
                 }
             }
         }
@@ -57,7 +70,10 @@ body {
         color: rgb(102, 102, 102);
     }
     .container {
-        padding: 48px 12px;
+        padding: 64px 12px;
+        @media (max-width: 425px) {
+            padding-bottom: 96px;
+        }
     }
 }
 
@@ -85,6 +101,7 @@ body {
         }
         p{
             color: rgb(102, 102, 102);
+            max-width: 500px;
         }
         figure{
             border-radius: 6px;
@@ -104,23 +121,30 @@ footer {
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: auto;
+    background-color: #111;
 
     .contact{
         background-color: #171717;
         color: white;
         padding: 24px 0;
 
+        border-radius: 0 0 12px 12px;
+
         .container{
             .row{
+                button {
+                    color: rgb(161, 161, 161);
+                    &:hover {
+                        color: white;
+                    }
+                }
+            
                 .links {
                     @media (max-width: 767px) {
-                        h3{
-                            display: none;
-                        }
                         margin-bottom: 24px;
                     }
                     h3{
-                        margin-bottom: 18px;
+                        margin-bottom: 12px;
                     }
                     .footwrapper{
                         figure{
@@ -135,6 +159,9 @@ footer {
                             @media (max-width: 767px) {
                                 margin: 0 0 6px 0;
                             }
+                        }
+                        div{
+                            gap: 6px;
                         }
 
                         @media (max-width: 767px) {
@@ -160,9 +187,24 @@ footer {
 
     }
     .copyright{
-        background-color: #444;
-        color: white;
-
+        color: rgb(161, 161, 161);
         padding: 6px 0;
+        .container{
+            button {
+                color: rgb(161, 161, 161);
+                &:hover {
+                    color: white;
+                }
+            }
+            justify-content: space-between;
+            span {
+                color: white;
+            }
+            @media (max-width: 767px) {
+                justify-content: center;
+                gap: 12px;
+            }
+        }
+
     }
 }

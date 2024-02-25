@@ -4,7 +4,7 @@ const highlightsData = [
     { title: "Responsive Design", content: "I specialize in creating responsive designs that look amazing on any device, ensuring a seamless user experience across platforms." },
     { title: "React.js Expertise", content: "As a React.js enthusiast, I build dynamic and interactive user interfaces that engage your audience and drive results." },
     {title: "Bootstrap Mastery", content: "With a solid command of Bootstrap, I leverage its powerful grid system and components to deliver polished and professional websites."},
-    {title: "Tailwind CSS Wizardry", content: "I harness the flexibility of Tailwind CSS to create custom, utility-first designs that align perfectly with your brand identity."}
+    {title: "Tailwind Wizardry", content: "I harness the flexibility of Tailwind CSS to create custom, utility-first designs that align perfectly with your brand identity."}
 ]
 
 const servicesData = [
