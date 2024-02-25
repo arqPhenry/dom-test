@@ -2,10 +2,10 @@
   "name": "domo-landing-wireframe",
   "version": "1.0.0",
   "description": "Technical test to apply for the position of frontend dev",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compilescss": "npx sass src/styles/styles.scss styles.css"
+    "compilescss": "npx sass src/styles/styles.scss styles.css --watch"
   },
   "keywords": [
     "html",
