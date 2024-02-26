@@ -35,7 +35,7 @@ body {
             .navbar-brand{
                 img{
                     filter: invert(1);
-                    max-width: 35px;
+                    max-width: 36px;
                 }
             }
             .icon-button {
@@ -71,14 +71,48 @@ body {
 .hero-section{
     h2{
         color: var(--negro-3);
+        span{
+            background: linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(153,153,153,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        position: relative;
+        &::before{
+            content: '';
+            height: 8px;
+            width: 15%;
+            background-color: var(--negro-3);
+            position: absolute;
+            left: 0;
+            bottom: -16px;
+        }
     }
     p{
+        margin-top: 48px;
         color: var(--gris-4);
     }
     .container {
         padding: 64px 12px;
         @media (max-width: 425px) {
             padding-bottom: 96px;
+        }
+        div{
+            a{
+                button{ 
+                    span{
+                        transition: all 0.15s ease;
+                        margin-left: 6px;
+                        svg{
+                            transform: scale(.7);
+                        }
+                    }
+                    &:hover{
+                        span{
+                            margin-left: 12px;  
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -125,11 +159,30 @@ body {
     .services-section-card{
         padding: 48px 0 0 0;
         h4{
-            color: var(--negro-3)
+            color: var(--negro-3);
+            position: relative;
+            &::before{
+                content: '';
+                height: 4px;
+                width: 10%;
+                background-color: var(--negro-3);
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+            }
         }
         p{
+            margin-top: 24px;
             color: var(--gris-4);
             max-width: 500px;
+        }
+        button{
+            span{
+                margin-left: 6px;
+                svg{
+                    transform: scale(.7);
+                }
+            }
         }
         figure{
             border-radius: 6px;
@@ -198,6 +251,13 @@ footer {
                         }
                         div{
                             gap: 6px;
+                            button{
+                                min-width: 148px;
+                                @media (max-width: 767px) {
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                            }
                         }
 
                         @media (max-width: 767px) {

@@ -37,7 +37,7 @@ function createServices (data) {
           <div class="col-md-8 col-xsm-12 mb-2">
               <h4 class="medium-title">${card.title}</h4>
               <p class="normal-text">${card.content}</p>
-              <button class="white-button">${card.button}</button>
+              <button class="white-button">${card.button}<span><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color:var(--geist-foreground);width:24px;height:24px"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span></button>
           </div>
           <div class="col-md-4 col-xsm-12">
               <figure><img src="${card.image}" alt="service-img"></figure>

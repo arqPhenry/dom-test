@@ -179,7 +179,7 @@ body a {
 }
 .lobby header nav .navbar-brand img {
   filter: invert(1);
-  max-width: 35px;
+  max-width: 36px;
 }
 .lobby header nav .icon-button {
   color: var(--negro-3);
@@ -207,8 +207,24 @@ body a {
 
 .hero-section h2 {
   color: var(--negro-3);
+  position: relative;
+}
+.hero-section h2 span {
+  background: linear-gradient(0deg, rgb(17, 17, 17) 0%, rgb(153, 153, 153) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-section h2::before {
+  content: "";
+  height: 8px;
+  width: 15%;
+  background-color: var(--negro-3);
+  position: absolute;
+  left: 0;
+  bottom: -16px;
 }
 .hero-section p {
+  margin-top: 48px;
   color: var(--gris-4);
 }
 .hero-section .container {
@@ -218,6 +234,16 @@ body a {
   .hero-section .container {
     padding-bottom: 96px;
   }
+}
+.hero-section .container div a button span {
+  transition: all 0.15s ease;
+  margin-left: 6px;
+}
+.hero-section .container div a button span svg {
+  transform: scale(0.7);
+}
+.hero-section .container div a button:hover span {
+  margin-left: 12px;
 }
 
 .internal-links-section {
@@ -263,10 +289,27 @@ body a {
 }
 .services-section .services-section-card h4 {
   color: var(--negro-3);
+  position: relative;
+}
+.services-section .services-section-card h4::before {
+  content: "";
+  height: 4px;
+  width: 10%;
+  background-color: var(--negro-3);
+  position: absolute;
+  left: 0;
+  bottom: -10px;
 }
 .services-section .services-section-card p {
+  margin-top: 24px;
   color: var(--gris-4);
   max-width: 500px;
+}
+.services-section .services-section-card button span {
+  margin-left: 6px;
+}
+.services-section .services-section-card button span svg {
+  transform: scale(0.7);
 }
 .services-section .services-section-card figure {
   border-radius: 6px;
@@ -330,6 +373,15 @@ footer .contact .container .row .links .footwrapper figure img {
 }
 footer .contact .container .row .links .footwrapper div {
   gap: 6px;
+}
+footer .contact .container .row .links .footwrapper div button {
+  min-width: 148px;
+}
+@media (max-width: 767px) {
+  footer .contact .container .row .links .footwrapper div button {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media (max-width: 767px) {
   footer .contact .container .row .links .footwrapper {
