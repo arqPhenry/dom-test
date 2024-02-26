@@ -9,7 +9,7 @@ const highlightsData = [
 
 const servicesData = [
     {title: "Custom Web Development", content: "Elevate your online presence with bespoke web solutions tailored to your unique requirements. Let's turn your vision into reality.", button: "Get Started", image: "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"},
-    {title: "UI/UX Design", content: "Craft intuitive and visually stunning user interfaces that captivate your audience and drive engagement. Let's create experiences that leave a lasting impression.", button: "See Designs", image: "https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"},
+    {title: "UI/UX Design", content: "Craft intuitive and visually stunning user interfaces that captivate your audience and drive engagement. Let's create experiences that leave a lasting impression.", button: "See Designs", image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"},
     {title: "Performance Optimization", content: "Optimize your website for speed and performance to enhance user satisfaction and boost conversion rates. Let's supercharge your digital presence.", button: "Optimize Now", image: "https://images.pexels.com/photos/730134/pexels-photo-730134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
 ]
 

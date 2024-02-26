@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Geist Regular;
   src: url("../assets/fonts/Geist-Regular.woff2") format("woff2");
@@ -64,6 +65,20 @@
   font-weight: 400;
 }
 
+:root {
+  --blanco: #FFFFFF;
+  --blanco-2: #fafafa;
+  --gris-1: #eaeaea;
+  --gris-2: #999;
+  --gris-3: #888;
+  --gris-4: #666;
+  --negro-1: #444;
+  --negro-2: #333;
+  --negro-3: #171717;
+  --negro-4: #111;
+  --negro: #000;
+}
+
 button {
   border-radius: 6px;
   font-weight: 500;
@@ -78,49 +93,49 @@ button {
 }
 
 .primary-button {
-  color: white;
-  background-color: #171717;
+  color: var(--blanco);
+  background-color: var(--negro-3);
   padding: 0 16px;
   height: 40px;
 }
 .primary-button:hover {
-  background-color: #333;
+  background-color: var(--negro-2);
 }
 
 .secundary-button {
-  color: #171717;
+  color: var(--negro-3);
   background: none;
   padding: 0 16px;
   height: 40px;
 }
 .secundary-button:hover {
-  background-color: #fafafa;
+  background-color: var(--blanco-2);
 }
 
 .tiny-button {
-  color: white;
-  background-color: #171717;
+  color: var(--blanco);
+  background-color: var(--negro-3);
   padding: 0 12px;
   height: 32px;
 }
 .tiny-button:hover {
-  background-color: #333;
+  background-color: var(--negro-2);
 }
 
 .white-button {
-  color: #171717;
-  background-color: white;
+  color: var(--negro-3);
+  background-color: var(--blanco);
   padding: 0 16px;
   height: 32px;
-  border: 1px solid hsla(0, 0%, 0%, 0.08);
+  border: 1px solid var(--gris-1);
 }
 .white-button:hover {
-  background-color: #fafafa;
+  background-color: var(--blanco-2);
 }
 
 .icon-button {
-  color: white;
-  background-color: #171717;
+  color: var(--blanco);
+  background-color: var(--negro-3);
   padding: 6px 6px;
 }
 .icon-button svg {
@@ -128,11 +143,11 @@ button {
   margin: 0;
 }
 .icon-button:hover {
-  background-color: #333;
+  background-color: var(--negro-2);
 }
 
 body {
-  background-color: #fafafa;
+  background-color: var(--blanco-2);
   font-family: "Geist", Arial, sans-serif;
   padding: 0;
   margin: 0;
@@ -155,20 +170,24 @@ body a {
   }
 }
 .lobby header .container-fluid {
-  background-color: #171717;
+  background-color: var(--negro-3);
 }
 .lobby header .container-fluid .upper-bar {
   display: flex;
   gap: 6px;
   padding: 6px 12px;
 }
+.lobby header nav .navbar-brand img {
+  filter: invert(1);
+  max-width: 35px;
+}
 .lobby header nav .icon-button {
-  color: #111;
-  background-color: white;
-  border: 1px solid hsla(0, 0%, 0%, 0.08);
+  color: var(--negro-3);
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-1);
 }
 .lobby header nav .icon-button:hover {
-  background-color: #fafafa;
+  background-color: var(--blanco-2);
 }
 .lobby header nav .icon-button:focus {
   box-shadow: none;
@@ -187,10 +206,10 @@ body a {
 }
 
 .hero-section h2 {
-  color: rgb(23, 23, 23);
+  color: var(--negro-3);
 }
 .hero-section p {
-  color: rgb(102, 102, 102);
+  color: var(--gris-4);
 }
 .hero-section .container {
   padding: 64px 12px;
@@ -201,17 +220,39 @@ body a {
   }
 }
 
+.internal-links-section {
+  background-color: var(--negro-4);
+}
 .internal-links-section .internal-links-card {
-  background-color: #111;
-  color: white;
+  position: relative;
+  z-index: 1;
+  color: var(--blanco);
   aspect-ratio: 1/1;
   padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.internal-links-section .internal-links-card h4 {
+  z-index: 1;
+}
 .internal-links-section .internal-links-card p {
-  color: rgb(161, 161, 161);
+  color: var(--gris-2);
+  z-index: 1;
+}
+.internal-links-section .internal-links-card .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(148deg, rgba(17, 17, 17, 0) 0%, rgba(51, 51, 51, 0.4) 49%, rgba(17, 17, 17, 0) 100%);
+  z-index: 0; /* Asegura que el overlay esté detrás de la carta */
+  transition: opacity 0.5s ease; /* Transición para la opacidad */
+  opacity: 0; /* Empieza invisible */
+}
+.internal-links-section .internal-links-card:hover .gradient {
+  opacity: 1;
 }
 
 .services-section {
@@ -221,10 +262,10 @@ body a {
   padding: 48px 0 0 0;
 }
 .services-section .services-section-card h4 {
-  color: rgb(23, 23, 23);
+  color: var(--negro-3);
 }
 .services-section .services-section-card p {
-  color: rgb(102, 102, 102);
+  color: var(--gris-4);
   max-width: 500px;
 }
 .services-section .services-section-card figure {
@@ -236,25 +277,33 @@ body a {
 .services-section .services-section-card figure img {
   max-height: 100%;
   filter: saturate(0);
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+.services-section .services-section-card figure img:hover {
+  filter: saturate(1);
 }
 
 footer {
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: auto;
-  background-color: #111;
+  background-color: var(--negro);
 }
 footer .contact {
-  background-color: #171717;
-  color: white;
+  background: linear-gradient(166deg, rgba(17, 17, 17, 0) 0%, rgba(51, 51, 51, 0.4) 59%, rgba(17, 17, 17, 0) 100%);
+  color: var(--blanco);
   padding: 24px 0;
+  border-bottom: 1px solid var(--negro-2);
   border-radius: 0 0 12px 12px;
 }
 footer .contact .container .row button {
-  color: rgb(161, 161, 161);
+  color: var(--gris-2);
+  background-color: var(--negro-4);
 }
 footer .contact .container .row button:hover {
-  color: white;
+  color: var(--blanco);
+  background-color: var(--negro-3);
 }
 @media (max-width: 767px) {
   footer .contact .container .row .links {
@@ -272,7 +321,7 @@ footer .contact .container .row .links .footwrapper figure {
 }
 footer .contact .container .row .links .footwrapper figure img {
   max-width: 100%;
-  filter: saturate(0);
+  filter: brightness(0.95);
 }
 @media (max-width: 767px) {
   footer .contact .container .row .links .footwrapper figure {
@@ -295,26 +344,31 @@ footer .contact .container .row .social-media {
   align-items: end;
   justify-content: end;
 }
+footer .contact .container .row .social-media .d-flex {
+  gap: 6px;
+}
 @media (max-width: 767px) {
   footer .contact .container .row .social-media {
     justify-content: center;
   }
 }
 footer .copyright {
-  color: rgb(161, 161, 161);
+  color: var(--gris-2);
   padding: 6px 0;
 }
 footer .copyright .container {
   justify-content: space-between;
 }
 footer .copyright .container button {
-  color: rgb(161, 161, 161);
+  color: var(--gris-2);
+  background-color: var(--negro-4);
 }
 footer .copyright .container button:hover {
-  color: white;
+  color: var(--blanco);
+  background-color: var(--negro-3);
 }
 footer .copyright .container span {
-  color: white;
+  color: var(--blanco);
 }
 @media (max-width: 767px) {
   footer .copyright .container {

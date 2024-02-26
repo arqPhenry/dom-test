@@ -1,3 +1,5 @@
+@use 'vars';
+
 button {
     border-radius: 6px;
     font-weight: 500;
@@ -14,55 +16,55 @@ button {
 }
 
 .primary-button {
-    color: white;
-    background-color: #171717;
+    color: var(--blanco);
+    background-color: var(--negro-3);
     padding: 0 16px;
     height: 40px;
     &:hover{
-        background-color: #333;
+        background-color: var(--negro-2);
     }
 }
 
 .secundary-button {
-    color: #171717;
+    color: var(--negro-3);
     background: none;
     padding: 0 16px;
     height: 40px;
     &:hover{
-        background-color: #fafafa;
+        background-color: var(--blanco-2);
     }
 }
 
 .tiny-button {
-    color: white;
-    background-color: #171717;
+    color: var(--blanco);
+    background-color: var(--negro-3);
     padding: 0 12px;
     height: 32px;
     &:hover{
-        background-color: #333;
+        background-color: var(--negro-2);
     }
 }
 
 .white-button {
-    color: #171717;
-    background-color: white;
+    color: var(--negro-3);
+    background-color: var(--blanco);
     padding: 0 16px;
     height: 32px;
-    border: 1px solid hsla(0, 0, 0, 0.08);
+    border: 1px solid var(--gris-1);
     &:hover{
-        background-color: #fafafa;
+        background-color: var(--blanco-2);
     }
 }
 
 .icon-button{
-    color: white;
-    background-color: #171717;
+    color: var(--blanco);
+    background-color: var(--negro-3);
     padding: 6px 6px;
     svg {
         transform: scale(.67);
         margin: 0;
     }
     &:hover{
-        background-color: #333;
+        background-color: var(--negro-2);
     }
 }

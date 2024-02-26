@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717" />
     <title>DOMO Challenge - Henry Navas</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="./src/assets/images/logo-esfera.svg" type="image/svg">
 </head>
 <body>     
-    <div class="lobby">
+    <div class="lobby" id="home">
         <header>
             <div class="container-fluid">
                 <div class="container d-flex justify-content-end upper-bar">
@@ -19,16 +21,16 @@
             </div>
             <nav class="navbar navbar-expand-md bg-white">
                 <div class="container">
-                    <span class="navbar-brand normal-text">Henry Navas</span>
+                    <figure class="navbar-brand m-0 p-0"><img src="./src/assets/images/logo-esfera.svg" alt="logoDOMO"></figure>
                     <button class="navbar-toggler icon-button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="button">
                         <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color:var(--geist-foreground);width:24px;height:24px"><path d="M3 12h18"/><path d="M3 6h18"/><path d="M3 18h18"/></svg>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="#"><button class="secundary-button">Home</button></a></li>
-                            <li class="nav-item"><a href="#"><button class="secundary-button">Highlights</button></a></li>
-                            <li class="nav-item"><a href="#"><button class="secundary-button">Services</button></a></li>
-                            <li class="nav-item"><a href="#"><button class="secundary-button">Contact</button></a></li>
+                            <li class="nav-item"><a href="#home"><button class="secundary-button">Home</button></a></li>
+                            <li class="nav-item"><a href="#internal-links-section"><button class="secundary-button">Highlights</button></a></li>
+                            <li class="nav-item"><a href="#services-section"><button class="secundary-button">Services</button></a></li>
+                            <li class="nav-item"><a href="#contact"><button class="secundary-button">Contact</button></a></li>
                         </ul>
                     </div>
                 </div>
@@ -38,7 +40,9 @@
             <div class="container">
                 <h2 class="big-title">Turning Ideas into Interactive Web Solutions</h2>
                 <p class="big-subtitle">Hi there! I'm Henry Navas, a passionate Frontend Developer ready to elevate your digital experience. With expertise in React.js, Bootstrap, and Tailwind CSS, I craft seamless and stunning web solutions tailored to your needs.</p>
-                <a href="https://henrynavasportfolio.netlify.app/" target="_blank"><button class="primary-button">Explore my work</button></a>
+                <div class="d-flex">
+                    <a href="https://henrynavasportfolio.netlify.app/" target="_blank"><button class="primary-button">Explore my work</button></a>
+                </div>
             </div>
         </section>
     </div>
@@ -50,7 +54,7 @@
     </section>
 
     <footer>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="links col-md-9 col-sm-12 d-flex flex-column">

@@ -9,7 +9,8 @@ function createHighlights (data) {
     
   // Creo el contenido de la card
         cardElement.innerHTML = `
-        <div>
+        <div class="gradient"></div>
+        <div class="d-flex flex-column">
             <h4 class="normal-title">${card.title}</h4>
             <p class="normal-text">${card.content}</p>
         </div>
